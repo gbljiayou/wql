@@ -74,6 +74,24 @@ const constantRoutes = [
 
 const asyncRoutes = [
   {
+    path: '/order',
+    component: 'layout/Layout',
+    redirect: '/order/list',
+    name: 'Order',
+    meta: {
+      title: '订单管理',
+      icon: 'example'
+    },
+    children: [
+      {
+        path: 'list',
+        component: 'views/wql/order/list',
+        name: 'OrderList',
+        meta: { title: '订单管理', icon: 'list' }
+      }
+    ]
+  },
+  {
     path: '/permission',
     component: 'layout/Layout',
     redirect: '/permission/index',
