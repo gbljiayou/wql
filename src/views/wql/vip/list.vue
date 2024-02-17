@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { fetchList } from '@/api/vip'
+import { fetchList } from '@/api/article'
 import Pagination from '@/components/Pagination/index.vue' // Secondary package based on el-pagination
 
 export default {
