@@ -1,42 +1,42 @@
 <template>
   <div class="app-container">
     <el-table v-loading="listLoading" :data="list" border fit highlight-current-row style="width: 100%" height="700">
-      <el-table-column align="center" label="ID" width="80">
+      <el-table-column align="center" label="ID">
         <template slot-scope="scope">
           <span>{{ scope.row.id }}</span>
         </template>
       </el-table-column>
-      <el-table-column width="120px" align="center" label="酒店名称">
+      <el-table-column align="center" label="酒店名称">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.storeName }}</span>
         </template>
       </el-table-column>
-      <el-table-column width="120px" align="center" label="区域">
+      <el-table-column align="center" label="酒店区域">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.storeRegion }}</span>
         </template>
       </el-table-column>
-      <el-table-column width="120px" align="center" label="酒店地址">
+      <el-table-column align="center" label="酒店地址">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.storeAddress }}</span>
         </template>
       </el-table-column>
-      <el-table-column width="120px" align="center" label="电话">
+      <el-table-column align="center" label="酒店电话">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.storePhone }}</span>
         </template>
       </el-table-column>
-      <el-table-column width="120px" align="center" label="创建人">
+      <el-table-column align="center" label="创建人">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.createBy }}</span>
         </template>
       </el-table-column>
-      <el-table-column width="180px" align="center" label="创建时间">
+      <el-table-column align="center" label="创建时间">
         <template slot-scope="scope">
-          <span>{{ scope.row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
+          <span>{{ scope.row.createTime | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
         </template>
       </el-table-column>
-      <el-table-column align="center" label="操作" width="120">
+      <el-table-column align="center" label="操作">
         <template slot-scope="scope">
           <router-link :to="'/example/edit/'+scope.row.id">
             <el-button type="primary" size="small" icon="el-icon-edit">

@@ -17,10 +17,10 @@ const image_uri = 'https://wpimg.wallstcn.com/e4558086-631c-425c-9430-56ffb46e70
 for (let i = 0; i < count; i++) {
   List.push(Mock.mock({
     id: '@increment',
-    author: '@first',
+    author: '@cname',
     phone: +Mock.Random.phone(),
-    idCard: '@first',
-    timestamp: +Mock.Random.date('T')
+    idCard: '@ID',
+    createTime: +Mock.Random.date('T')
     // reviewer: '@first',
     // title: '@title(5, 10)',
     // content_short: 'mock data',
@@ -72,11 +72,11 @@ module.exports = [
     type: 'get',
     response: config => {
       const {id} = config.query
-      for (const article of List) {
-        if (article.id === +id) {
+      for (const vip of List) {
+        if (vip.id === +id) {
           return {
             code: 20000,
-            data: article
+            data: vip
           }
         }
       }

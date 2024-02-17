@@ -3,28 +3,28 @@
     <div class="filter-container">
       <!--检索条件-->
       <el-input
-        v-model="listQuery.title"
+        v-model="listQuery.orderNo"
         placeholder="订单号"
         style="width: 200px;"
         class="filter-item"
         @keyup.enter.native="handleFilter"
       />
       <el-input
-        v-model="listQuery.title"
-        placeholder="酒店"
+        v-model="listQuery.storeName"
+        placeholder="酒店名称"
         style="width: 200px;"
         class="filter-item"
         @keyup.enter.native="handleFilter"
       />
       <el-input
-        v-model="listQuery.title"
+        v-model="listQuery.customerName"
         placeholder="入住人"
         style="width: 200px;"
         class="filter-item"
         @keyup.enter.native="handleFilter"
       />
       <el-date-picker
-        v-model="listQuery.title"
+        v-model="listQuery.inTime"
         placeholder="入住时间"
         style="width: 200px;"
         class="filter-item"
@@ -49,34 +49,34 @@
       </el-table-column>
       <el-table-column align="center" label="订单号">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.orderNo }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="酒店名称">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.storeName }}</span>
         </template>
       </el-table-column>
       <el-table-column label="订单状态" class-name="status-col">
         <template slot-scope="{row}">
-          <el-tag :type="row.status | statusFilter">
-            {{ row.status }}
+          <el-tag :type="row.orderStatus | statusFilter">
+            {{ row.orderStatus }}
           </el-tag>
         </template>
       </el-table-column>
       <el-table-column align="center" label="订单日期">
         <template slot-scope="scope">
-          <span>{{ scope.row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
+          <span>{{ scope.row.orderTime | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="入住人姓名">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.customerName }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="入住人联系方式">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.customerPhone }}</span>
         </template>
       </el-table-column>
       <el-table-column label="入住状态" class-name="status-col">
@@ -88,12 +88,12 @@
       </el-table-column>
       <el-table-column align="center" label="入住日期">
         <template slot-scope="scope">
-          <span>{{ scope.row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
+          <span>{{ scope.row.inTime | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="离店日期">
         <template slot-scope="scope">
-          <span>{{ scope.row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
+          <span>{{ scope.row.outTime | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="操作">
