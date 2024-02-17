@@ -113,7 +113,9 @@ export default {
 
       for (let route of routes) {
         // skip some route
-        if (route.hidden) { continue }
+        if (route.hidden) {
+          continue
+        }
 
         const onlyOneShowingChild = this.onlyOneShowingChild(route.children, route)
 
@@ -182,7 +184,9 @@ export default {
             message: 'Delete succed!'
           })
         })
-        .catch(err => { console.error(err) })
+        .catch(err => {
+          console.error(err)
+        })
     },
     generateTree(routes, basePath = '/', checkedKeys) {
       const res = []
@@ -248,7 +252,7 @@ export default {
 
       // Show parent if there are no child route to display
       if (showingChildren.length === 0) {
-        onlyOneChild = { ... parent, path: '', noShowingChildren: true }
+        onlyOneChild = { ...parent, path: '', noShowingChildren: true }
         return onlyOneChild
       }
 
@@ -263,6 +267,7 @@ export default {
   .roles-table {
     margin-top: 30px;
   }
+
   .permission-tree {
     margin-bottom: 30px;
   }

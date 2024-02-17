@@ -14,6 +14,7 @@ about: Asking questions about use
 -->
 
 #### Steps to reproduce（问题复现步骤）
+
 <!--
 1. [xxx]
 2. [xxx]
@@ -22,7 +23,6 @@ about: Asking questions about use
 
 #### Screenshot or Gif（截图或动态图）
 
-
 #### Link to minimal reproduction（最小可在线还原demo）
 
 <!--
@@ -30,6 +30,7 @@ Please only use Codepen, JSFiddle, CodeSandbox or a github repo
 -->
 
 #### Other relevant information（格外信息）
+
 - Your OS:
 - Node.js version:
 - vue-element-admin version:

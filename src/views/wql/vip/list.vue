@@ -62,7 +62,7 @@
       </el-table-column>
       <el-table-column align="center" label="操作">
         <template slot-scope="scope">
-          <router-link :to="'/example/edit/'+scope.row.id">
+          <router-link :to="'/vip/edit/'+scope.row.id">
             <el-button type="primary" size="small" icon="el-icon-edit">编辑</el-button>
           </router-link>
         </template>
@@ -116,6 +116,15 @@ export default {
     handleFilter() {
       this.listQuery.page = 1
       this.getList()
+    },
+    handleCreate() {
+      // this.resetTemp()
+      // this.dialogStatus = 'create'
+      // this.dialogFormVisible = true
+      // this.$nextTick(() => {
+      //   this.$refs['dataForm'].clearValidate()
+      // })
+      // this.getList()
     }
   }
 }
@@ -125,6 +134,7 @@ export default {
 .edit-input {
   padding-right: 100px;
 }
+
 .cancel-btn {
   position: absolute;
   right: 15px;

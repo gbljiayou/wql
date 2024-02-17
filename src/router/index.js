@@ -23,14 +23,14 @@ import nestedRouter from './modules/nested'
  * redirect: noRedirect           if set noRedirect will no redirect in the breadcrumb
  * name:'router-name'             the name is used by <keep-alive> (must set!!!)
  * meta : {
-    roles: ['admin','editor']    control the page roles (you can set multiple roles)
-    title: 'title'               the name show in sidebar and breadcrumb (recommend set)
-    icon: 'svg-name'/'el-icon-x' the icon show in the sidebar
-    noCache: true                if set true, the page will no be cached(default is false)
-    affix: true                  if set true, the tag will affix in the tags-view
-    breadcrumb: false            if set false, the item will hidden in breadcrumb(default is true)
-    activeMenu: '/example/list'  if set path, the sidebar will highlight the path you set
-  }
+ roles: ['admin','editor']    control the page roles (you can set multiple roles)
+ title: 'title'               the name show in sidebar and breadcrumb (recommend set)
+ icon: 'svg-name'/'el-icon-x' the icon show in the sidebar
+ noCache: true                if set true, the page will no be cached(default is false)
+ affix: true                  if set true, the tag will affix in the tags-view
+ breadcrumb: false            if set false, the item will hidden in breadcrumb(default is true)
+ activeMenu: '/example/list'  if set path, the sidebar will highlight the path you set
+ }
  */
 
 /**
@@ -139,19 +139,20 @@ export const asyncRoutes = [
       icon: 'el-icon-s-help'
     },
     children: [
-      // {
-      //   path: 'create',
-      //   component: () => import('@/views/example/create'),
-      //   name: 'CreateArticle',
-      //   meta: { title: 'Create Article', icon: 'edit' }
-      // },
-      // {
-      //   path: 'edit/:id(\\d+)',
-      //   component: () => import('@/views/example/edit'),
-      //   name: 'EditArticle',
-      //   meta: { title: 'Edit Article', noCache: true, activeMenu: '/example/list' },
-      //   hidden: true
-      // },
+      {
+        path: 'create',
+        component: () => import('@/views/wql/vip/create'),
+        name: 'CreateVip',
+        meta: { title: 'Create Article', icon: 'edit' },
+        hidden: true
+      },
+      {
+        path: 'edit/:id(\\d+)',
+        component: () => import('@/views/wql/vip/edit'),
+        name: 'EditVip',
+        meta: { title: 'Edit Article', noCache: true, activeMenu: '/vip/list' },
+        hidden: true
+      },
       {
         path: 'list',
         component: () => import('@/views/wql/vip/list'),

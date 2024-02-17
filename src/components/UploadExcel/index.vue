@@ -119,11 +119,12 @@ export default {
 </script>
 
 <style scoped>
-.excel-upload-input{
+.excel-upload-input {
   display: none;
   z-index: -9999;
 }
-.drop{
+
+.drop {
   border: 2px dashed #bbb;
   width: 600px;
   height: 160px;
