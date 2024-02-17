@@ -29,7 +29,7 @@ for (let i = 0; i < count; i++) {
 
 module.exports = [
   {
-    url: '/vue-element-admin/article/list',
+    url: '/vue-element-admin/storePrice/list',
     type: 'get',
     response: config => {
       const { importance, type, title, page = 1, limit = 20, sort } = config.query
@@ -58,7 +58,7 @@ module.exports = [
   },
 
   {
-    url: '/vue-element-admin/article/detail',
+    url: '/vue-element-admin/storePrice/detail',
     type: 'get',
     response: config => {
       const { id } = config.query
@@ -74,7 +74,7 @@ module.exports = [
   },
 
   {
-    url: '/vue-element-admin/article/pv',
+    url: '/vue-element-admin/storePrice/pv',
     type: 'get',
     response: _ => {
       return {
@@ -92,7 +92,7 @@ module.exports = [
   },
 
   {
-    url: '/vue-element-admin/article/create',
+    url: '/vue-element-admin/storePrice/create',
     type: 'post',
     response: _ => {
       return {
@@ -103,7 +103,7 @@ module.exports = [
   },
 
   {
-    url: '/vue-element-admin/article/update',
+    url: '/vue-element-admin/storePrice/update',
     type: 'post',
     response: _ => {
       return {

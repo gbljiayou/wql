@@ -4,12 +4,18 @@ const { param2Obj } = require('./utils')
 const user = require('./user')
 const role = require('./role')
 const article = require('./article')
+const order = require('./order')
+const storePrice = require('./storePrice')
+const vip = require('./vip')
 const search = require('./remote-search')
 
 const mocks = [
   ...user,
   ...role,
   ...article,
+  ...order,
+  ...storePrice,
+  ...vip,
   ...search
 ]
 

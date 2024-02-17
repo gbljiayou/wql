@@ -80,14 +80,19 @@ const asyncRoutes = [
     name: 'Order',
     meta: {
       title: '订单管理',
-      icon: 'example'
+      icon: 'example',
+      roles: ['admin', 'editor']
     },
     children: [
       {
         path: 'list',
         component: 'views/wql/order/list',
         name: 'OrderList',
-        meta: { title: '订单管理', icon: 'list' }
+        meta: {
+          title: '订单管理',
+          icon: 'list',
+          roles: ['admin', 'editor']
+        }
       }
     ]
   },

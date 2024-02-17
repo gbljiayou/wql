@@ -2,12 +2,43 @@
   <div class="app-container">
     <div class="filter-container">
       <!--检索条件-->
-      <el-input v-model="listQuery.title" placeholder="订单号" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
-      <el-input v-model="listQuery.title" placeholder="酒店" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
-      <el-input v-model="listQuery.title" placeholder="入住人" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
-      <el-date-picker v-model="listQuery.title" placeholder="入住时间" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
+      <el-input
+        v-model="listQuery.title"
+        placeholder="订单号"
+        style="width: 200px;"
+        class="filter-item"
+        @keyup.enter.native="handleFilter"
+      />
+      <el-input
+        v-model="listQuery.title"
+        placeholder="酒店"
+        style="width: 200px;"
+        class="filter-item"
+        @keyup.enter.native="handleFilter"
+      />
+      <el-input
+        v-model="listQuery.title"
+        placeholder="入住人"
+        style="width: 200px;"
+        class="filter-item"
+        @keyup.enter.native="handleFilter"
+      />
+      <el-date-picker
+        v-model="listQuery.title"
+        placeholder="入住时间"
+        style="width: 200px;"
+        class="filter-item"
+        @keyup.enter.native="handleFilter"
+      />
       <el-button v-waves class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">查询</el-button>
-      <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleCreate">新增</el-button>
+      <el-button
+        class="filter-item"
+        style="margin-left: 10px;"
+        type="primary"
+        icon="el-icon-edit"
+        @click="handleCreate"
+      >新增
+      </el-button>
     </div>
     <!--列表-->
     <el-table v-loading="listLoading" :data="list" border fit highlight-current-row style="width: 100%" height="700">
@@ -79,7 +110,7 @@
 </template>
 
 <script>
-import { fetchList } from '@/api/article'
+import { fetchList } from '@/api/order'
 import Pagination from '@/components/Pagination/index.vue' // Secondary package based on el-pagination
 
 export default {
@@ -117,6 +148,10 @@ export default {
         this.total = response.data.total
         this.listLoading = false
       })
+    },
+    handleFilter() {
+      this.listQuery.page = 1
+      this.getList()
     }
   }
 }
