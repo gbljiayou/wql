@@ -16,7 +16,8 @@ for (let i = 0; i < count; i++) {
   List.push(Mock.mock({
     id: '@increment',
     orderNo: 'O@integer(5)',
-    storeName: '@province@ctitle(2, 4)酒店',
+    // storeName: '@province@ctitle(2, 4)酒店',
+    storeName: '如家酒店',
     'orderStatus|1': ['已下单', '居住中', '已完成'],
     orderTime: +Mock.Random.date('T'),
     customerName: '@cname',
