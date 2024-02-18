@@ -15,7 +15,7 @@ const image_uri = 'https://wpimg.wallstcn.com/e4558086-631c-425c-9430-56ffb46e70
 for (let i = 0; i < count; i++) {
   List.push(Mock.mock({
     id: '@increment',
-    orderNo: '@increment',
+    orderNo: 'O@integer(5)',
     storeName: '@province@ctitle(2, 4)酒店',
     'orderStatus|1': ['已下单', '居住中', '已完成'],
     orderTime: +Mock.Random.date('T'),

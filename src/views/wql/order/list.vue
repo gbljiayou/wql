@@ -42,7 +42,7 @@
     </div>
     <!--列表-->
     <el-table v-loading="listLoading" :data="list" border fit highlight-current-row style="width: 100%" height="700">
-      <el-table-column align="center" label="ID">
+      <el-table-column align="center" label="ID" width="120">
         <template slot-scope="scope">
           <span>{{ scope.row.id }}</span>
         </template>
