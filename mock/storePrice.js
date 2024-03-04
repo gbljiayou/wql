@@ -19,12 +19,12 @@ for (let i = 0; i < count; i++) {
     // storeRegion: '@region',
     // storeAddress: '@county(true)',
     // storePhone: +Mock.Random.phone(),
-    storeName: '如家酒店',
-    storeRegion: '华北',
-    storeAddress: '北京市海淀区万寿路街道万寿路西街6号',
-    storePhone: '(010)68221668',
+    storeName: '奥利阳酒店',
+    storeRegion: '东北',
+    storeAddress: '大连市花园口经济区银杏路西街6号',
+    storePhone: '0411-89123333',
     createBy: '@cname',
-    createTime: +Mock.Random.date('T')
+    createTime: '2024-01-' + Mock.Random.natural(10, 28) + ' ' + Mock.Random.time()
   }))
 }
 

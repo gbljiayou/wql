@@ -32,13 +32,16 @@
       </el-table-column>
       <el-table-column align="center" label="创建时间">
         <template slot-scope="scope">
-          <span>{{ scope.row.createTime | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
+          <span>{{ scope.row.createTime }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="操作">
         <template slot-scope="scope">
           <router-link :to="'/vip/edit/'+scope.row.id">
             <el-button type="primary" size="small" icon="el-icon-edit">编辑</el-button>
+          </router-link>
+          <router-link :to="'/vip/delete/'+scope.row.id">
+            <el-button type="danger" size="small" icon="el-icon-delete">删除</el-button>
           </router-link>
         </template>
       </el-table-column>

@@ -101,6 +101,9 @@
           <router-link :to="'/example/edit/'+scope.row.id">
             <el-button type="primary" size="small" icon="el-icon-edit">编辑</el-button>
           </router-link>
+          <router-link :to="'/storePrice/delete/'+scope.row.id">
+            <el-button type="danger" size="small" icon="el-icon-delete">删除</el-button>
+          </router-link>
         </template>
       </el-table-column>
     </el-table>

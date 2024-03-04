@@ -17,14 +17,14 @@ for (let i = 0; i < count; i++) {
     id: '@increment',
     orderNo: 'O@integer(5)',
     // storeName: '@province@ctitle(2, 4)酒店',
-    storeName: '如家酒店',
+    storeName: '奥利阳酒店',
     'orderStatus|1': ['已下单', '居住中', '已完成'],
-    orderTime: +Mock.Random.date('T'),
+    orderTime: '2024-01-' + Mock.Random.natural(10, 15) + ' ' + Mock.Random.time(),
     customerName: '@cname',
     customerPhone: +Mock.Random.phone(),
     'status|1': ['未入住', '入住中', '已离店'],
-    inTime: +Mock.Random.date('T'),
-    outTime: +Mock.Random.date('T')
+    inTime: '2024-01-' + Mock.Random.natural(16, 20) + ' ' + Mock.Random.time(),
+    outTime: '2024-01-' + Mock.Random.natural(21, 28) + ' ' + Mock.Random.time()
     // timestamp: +Mock.Random.date('T'),
     // author: '@cname',
     // reviewer: '@first',

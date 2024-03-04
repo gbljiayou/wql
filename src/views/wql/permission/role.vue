@@ -1,7 +1,13 @@
 <template>
   <div class="app-container">
-    <el-button type="primary" @click="handleAddRole">新建角色</el-button>
-
+    <div class="filter-container">
+      <!--检索条件-->
+      <el-input v-model="rolesList.key" placeholder="角色编码" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
+      <el-input v-model="rolesList.name" placeholder="角色名称" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
+      <el-button v-waves class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">查询</el-button>
+      <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleAddRole">新增</el-button>
+    </div>
+    <!--列表-->
     <el-table :data="rolesList" style="width: 100%;margin-top:30px;" border>
       <el-table-column align="center" label="角色编码" width="220">
         <template slot-scope="scope">
@@ -16,6 +22,16 @@
       <el-table-column align="header-center" label="角色描述">
         <template slot-scope="scope">
           {{ scope.row.description }}
+        </template>
+      </el-table-column>
+      <el-table-column align="center" label="创建人">
+        <template slot-scope="scope">
+          <span>{{ scope.row.createBy }}</span>
+        </template>
+      </el-table-column>
+      <el-table-column align="center" label="创建时间">
+        <template slot-scope="scope">
+          <span>{{ scope.row.createTime }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="操作">

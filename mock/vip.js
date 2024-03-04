@@ -20,7 +20,7 @@ for (let i = 0; i < count; i++) {
     author: '@cname',
     phone: +Mock.Random.phone(),
     idCard: '@ID',
-    createTime: +Mock.Random.date('T')
+    createTime: '2024-01-' + Mock.Random.natural(10, 28) + ' ' + Mock.Random.time()
     // reviewer: '@first',
     // title: '@title(5, 10)',
     // content_short: 'mock data',

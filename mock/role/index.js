@@ -6,21 +6,27 @@ const routes = deepClone([...constantRoutes, ...asyncRoutes])
 
 const roles = [
   {
-    key: 'admin',
-    name: 'admin',
-    description: 'Super Administrator. Have access to view all pages.',
+    key: '1',
+    name: '系统管理员',
+    description: '全系统权限角色',
+    createBy: '@cname',
+    createTime: '2024-01-' + Mock.Random.natural(10, 28) + ' ' + Mock.Random.time(),
     routes: routes
   },
   {
-    key: 'editor',
-    name: 'editor',
-    description: 'Normal Editor. Can see all pages except permission page',
+    key: '2',
+    name: '财务部',
+    description: '会员管理及订单管理权限角色',
+    createBy: '@cname',
+    createTime: '2024-01-' + Mock.Random.natural(10, 28) + ' ' + Mock.Random.time(),
     routes: routes.filter(i => i.path !== '/permission')// just a mock
   },
   {
-    key: 'visitor',
-    name: 'visitor',
-    description: 'Just a visitor. Can only see the home page and the document page',
+    key: '3',
+    name: '客房部',
+    description: '门店及价格管理权限角色',
+    createBy: '@cname',
+    createTime: '2024-01-' + Mock.Random.natural(10, 28) + ' ' + Mock.Random.time(),
     routes: [{
       path: '',
       redirect: 'dashboard',
