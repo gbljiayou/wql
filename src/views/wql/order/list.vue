@@ -88,12 +88,12 @@
       </el-table-column>
       <el-table-column align="center" label="入住日期">
         <template slot-scope="scope">
-          <span>{{ scope.row.inTime | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
+          <span>{{ scope.row.inTime }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="离店日期">
         <template slot-scope="scope">
-          <span>{{ scope.row.outTime | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
+          <span>{{ scope.row.outTime }}</span>
         </template>
       </el-table-column>
       <el-table-column align="center" label="操作">
